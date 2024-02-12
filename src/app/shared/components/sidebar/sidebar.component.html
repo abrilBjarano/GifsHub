@@ -1,0 +1,27 @@
+<div class="border-right p-3" id="sidebar">
+
+  <h1 class="text-warning">GifsHub</h1>
+  <hr class="text-warning">
+
+  <div
+    class="list-group list-reset">
+
+    <button
+      class="list-group-item list-group-item-action"
+      *ngFor="let tag of tags"
+      (click)="searchTag(tag)">
+        {{ tag | titlecase }}
+    </button>
+
+  </div>
+
+  <br>
+
+  <div class="fixed-bottom p-5 justify-content-center align-items-center">
+    <button
+      class="btn btn-danger btn-lg"
+      (click)="reset()">
+        Eliminar historal</button>
+  </div>
+
+</div>
